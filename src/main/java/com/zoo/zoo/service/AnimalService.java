@@ -9,9 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AnimalService {
-    @Autowired
-    private UserService userService;
-
     public ResponseEntity<String> adoptAnAnimal(AdoptRequestDto requestDto) {
         return new ResponseEntity<>("입양되었습니다.", HttpStatus.OK);
     }

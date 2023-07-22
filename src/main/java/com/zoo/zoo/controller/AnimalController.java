@@ -9,8 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AnimalController {
+    private final AnimalService animalService;
+
     @Autowired
-    private AnimalService animalService;
+    public AnimalController (AnimalService animalService) {
+        this.animalService = animalService;
+    }
 
     @PostMapping("/animal")
     public ResponseEntity<String> adoptAnAnimal(AdoptRequestDto requestDto) {
