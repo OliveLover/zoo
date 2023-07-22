@@ -5,27 +5,23 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@Table(name = "ANIMAL")
+@Table(name = "USERS")
 @Entity
 @NoArgsConstructor
-public class Animal {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column
-    @Enumerated(EnumType.STRING)
-    private AnimalType species;
-
-    @Column
-    private String name;
+    private String userName;
 
     @Column
     private String gender;
 
-    public Animal(AnimalType species, String name, String gender) {
-        this.species = species;
-        this.name = name;
+    public User (String userName, String gender) {
+        this.userName = userName;
         this.gender = gender;
     }
+
 }
