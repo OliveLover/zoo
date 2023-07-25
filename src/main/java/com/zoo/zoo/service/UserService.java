@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+
     public ResponseEntity<String> createUser(CreateUserRequestDto requestDto) {
         return new ResponseEntity<>("이용자 등록이 완료되었습니다.", HttpStatus.OK);
     }
